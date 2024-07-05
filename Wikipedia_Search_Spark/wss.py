@@ -21,7 +21,7 @@ tf = hashingTF.transform(documents)
 # At this point we have an RDD of sparse vectors representing each document,
 # where each value maps to the term frequency of each unique hash value.
 
-# Let's compute the TF*IDF of each term in each document:
+# Let's compute the TF*IDF of each term in each documen:
 tf.cache()
 idf = IDF(minDocFreq=2).fit(tf)
 tfidf = idf.transform(tf)
